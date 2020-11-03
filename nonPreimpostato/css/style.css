@@ -1,0 +1,54 @@
+/* INIZIALIZZAZIONE */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* HELPER */
+.border {
+  border: 1px solid black;
+}
+.rel {
+  position: relative;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* GENERAL */
+section.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+section.container div.sub-container {
+  width: 60vw;
+  height: 80vh;
+  background-color: lightgrey;
+}
+section.container div.sub-container div.images {
+  width: 40vw;
+  height: 40vw;
+}
+section.container div.sub-container div.images img {
+  width: 100%;
+}
+/* FRECCE */
+section.container div.sub-container .prev, section.container div.sub-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  cursor: pointer;
+}
+section.container div.sub-container .prev {
+  left: 0;
+}
+section.container div.sub-container .next {
+  right: 0;
+}
