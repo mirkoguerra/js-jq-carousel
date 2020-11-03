@@ -35,8 +35,13 @@ section.container div.sub-container div.images {
   width: 40vw;
   height: 40vw;
 }
+/* IMMAGINI */
 section.container div.sub-container div.images img {
+  display: none;
   width: 100%;
+}
+section.container div.sub-container div.images img.active {
+  display: inline-block;
 }
 /* FRECCE */
 section.container div.sub-container .prev, section.container div.sub-container .next {
