@@ -1,0 +1,36 @@
+// mettendo tutto qui dentro, sono certo che verrà fatto tutto quando il DOM è già stato caricato
+$(document).ready(function(){
+
+  // definizione variabili
+  var imgPrima = $(".first");
+  var imgUltima = $(".last");
+
+  // gestisco il click della freccia sinistra
+  $(".prev").click(function(){
+
+    // definizione variabile attiva
+    var imgAttiva = $(".slider-wrapper .images img.active");
+
+    imgAttiva.removeClass("active"); // faccio in modo che al click della freccia rivolta verso sinistra, la classe active, inizialmente presente solo sulla prima immagine, venga tolta, così da rendere il display none
+    if (imgAttiva.hasClass("first")) {
+      imgUltima.addClass("active");
+    } else {
+      imgAttiva.prev().addClass("active");
+    } // se sono sulla prima immagine passo all'ultima, altrimenti passo all'immagine precedente rispetto a quella visualizzata
+  });
+
+  // gestisco il click della freccia destra
+  $(".next").click(function(){
+
+    // definizione variabile attiva
+    var imgAttiva = $(".slider-wrapper .images img.active");
+
+    imgAttiva.removeClass("active"); // faccio in modo che al click della freccia rivolta verso destra, la classe active, inizialmente presente solo sulla prima immagine, venga tolta, così da rendere il display none
+    if (imgAttiva.hasClass("last")) {
+      imgPrima.addClass("active");
+    } else {
+      imgAttiva.next().addClass("active");
+    } // se sono sull'ultima immagine passo alla prima, altrimenti passo all'immagine successiva rispetto a quella visualizzata
+  });
+
+});
