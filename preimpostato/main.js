@@ -46,3 +46,14 @@ $(document).ready(function(){
   });
 
 });
+
+//$(document).keyup(function)(){
+//  switch(event.which) {
+//    case 37:
+//      nomeFunzionePrev();
+//      break;
+//    case 39:
+//      nomeFunzioneNext();
+//      break;
+//  }
+//} per far funzionare le frecce
